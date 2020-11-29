@@ -24,10 +24,8 @@ export default function Home() {
             <h1>Alexander Skafte</h1>
             <div className="nav">
               {links.map((link, i) => (
-                <div className="link">
-                  <Link key={i} href={link.url}>
-                    {link.title}
-                  </Link>
+                <div key={i} className="link">
+                  <Link href={link.url}>{link.title}</Link>
                 </div>
               ))}
             </div>
@@ -45,7 +43,8 @@ export default function Home() {
           <p>
             Interested in systems, languages, people, decentralization,
             nutrition, breathing, training, music, photography, traditional
-            foods, web 1.0, nomadic steppe cultures and some more.
+            foods, web 1.0 and some more.
+            {/* nomadic steppe cultures */}
           </p>
           <p>
             Wanna chat? You can contact me on{" "}
@@ -58,10 +57,16 @@ export default function Home() {
       <div className="projects">
         <div className="wrapper">
           <div className="projects-intro">
-            <h2>Technical</h2>
+            <h2>Projects</h2>
             <p>
-              Let's take a look at a few projects I've done, both personal and
-              university-related.
+              I like to explore what can be done with software and have done so
+              over time by working on a few projects. Favorite languages/tools
+              are <b>Golang</b>, <b>React</b>, <b>Node</b> and <b>C</b> and{" "}
+              <b>Python</b>.
+            </p>
+            <p>
+              Below are a few of my software hobby projects, along with some
+              projects from university.
             </p>
           </div>
         </div>
@@ -71,13 +76,11 @@ export default function Home() {
           date="November 2020 – current"
         >
           <p>
-            On the one hand we have the real-time chat, which is just a normal
-            chat: the kind that we all know and use; on the other hand we have
-            the <b>hyper-real-time chat</b>, which shows each message as it is
-            being typed. It may not sound like a big deal but in fact it makes
-            conversation extremely fun and engaging. By design this kind of chat
-            encourages a more synchronous type of conversation, much like that
-            which we engage in offline.
+            A chat which shows each user's message as it is being typed. It may
+            not sound like a big deal but in fact it makes conversation
+            extremely fun and engaging. By design this kind of chat encourages a
+            synchronous type of conversation, much like that which we engage in
+            offline.
           </p>
           <p>
             Additionally the chat allows for anonymity but with the option to
@@ -86,37 +89,97 @@ export default function Home() {
           </p>
           <p>
             The advantages of an anonymous hyper-real-time chat are manifold:{" "}
-            <b>(I)</b> no user registration is required so anyone can join the
-            conversation instantly, <b>(II)</b> anonymity naturally defeats
-            credentialism by shifting the focus onto quality of content,{" "}
-            <b>(III)</b> the "hyper" component makes conversation move forward
-            very fast even if only a couple of people are typing and <b>(IV)</b>{" "}
-            since you see what people type in real time, "talking past each
-            other" becomes less of an issue.
+            <b>(I)</b> no user registration is required, so anyone can join the
+            conversation instantly, <b>(II)</b> shifts the focus onto quality of
+            content, naturally defeating credentialism, <b>(III)</b>{" "}
+            conversation moves forward very fast even if only a couple of people
+            are typing and <b>(IV)</b> since you see what people type in real
+            time, "talking past each other" becomes less of an issue.
           </p>
           <p>
-            A demo will be available shortly. Built with{" "}
-            <b>Socket.IO, React, Node, SQLite3 and NGINX</b>.
+            <b>
+              <Link href="/chat">A demo is available here!</Link>
+            </b>{" "}
+            Messages are removed after 12 hours. I'm <code>5VkEelUtSM</code>.
+          </p>
+          <p>
+            Built with <b>Socket.IO</b>, <b>React</b>, <b>Node</b>,{" "}
+            <b>SQLite3</b> and <b>NGINX</b>.
           </p>
         </Project>
 
-        <Project title="soma.cx" date="November 2020">
+        <Project title="soma dot cx" date="November 2020">
           <p>
             I wanted a more fun way of sharing various notes of mine, so I made
             this cozy site filled with great content in a form that takes you
-            back to the early days of browsing the web. Perhaps some ironically
-            I built it with Next.js, a very modern framework.{" "}
+            back to the early days of browsing the web. Perhaps somewhat
+            ironically I built it with <b>Next.js</b>, a very modern framework.{" "}
             <Link href="https://soma.cx">Check it out!</Link>
           </p>
         </Project>
 
         <Project title="Go Behave" date="December 2018">
           <p>
-            Go Behave is a behavior tree library in Go. Please refer to the{" "}
+            Go Behave is a behavior tree library in Golang. A behavior tree is a
+            formalism for describing the behavior of an autonomous entity such
+            as a robot or a non-player character in a video game. It allows for
+            highly modular behavior design thanks to the composability of its
+            nodes, and the formalism makes task switching and state management
+            trivial. Please refer to the{" "}
             <Link href="https://github.com/askft/go-behave">
               project repository
             </Link>{" "}
             for more information.
+          </p>
+        </Project>
+
+        <Project
+          title="2D Video Game &amp; Engine"
+          date="October 2018 – current"
+        >
+          <p>
+            A video game in a homemade engine that allows for, among other
+            features:
+          </p>
+          <ul>
+            <li>
+              <b>Artificial intelligence</b> via{" "}
+              <Link href="https://github.com/askft/go-behave">
+                behavior trees
+              </Link>{" "}
+              that can be defined in a custom-built simple declarative language,
+              allowing for e.g. game designers without programming experience to
+              design agents with intelligent behavior.
+            </li>
+            <li>
+              Efficient <b>collision detection and resolution</b> via spatial
+              partitioning.
+            </li>
+            <li>
+              Loading and rendering of <b>tilemaps and tilesets</b> built using
+              the{" "}
+              <Link href="https://www.mapeditor.org/">Tiled Map Editor</Link>.
+            </li>
+            <li>
+              <b>Easy development of features</b> thanks to a highly modular
+              implementation of an{" "}
+              <Link href="https://en.wikipedia.org/wiki/Entity–component–system">
+                Entity-Component-System
+              </Link>{" "}
+              architecture.
+            </li>
+          </ul>
+          <p>
+            The code is private but I'll gladly discuss it with anyone curious.
+          </p>
+        </Project>
+
+        <Project title="Kademlia" date="October 2018">
+          <p>
+            A Golang implementation of Kademlia, a distributed hash table for
+            decentralized peer-to-peer computer networks. Unfinished, but code
+            is available{" "}
+            <Link href="https://github.com/askft/kademlia">here</Link>.
           </p>
         </Project>
 
@@ -160,6 +223,23 @@ export default function Home() {
             DSP. The project report can be found{" "}
             <Link href="/noise.pdf">here</Link>.
           </p>
+        </Project>
+
+        <Project title="Miscellaneous" date="Undated">
+          <p>Just various stuff.</p>
+          <ul>
+            <li>
+              <Link href="/unix.html">Unix Timestamp Converter</Link>
+            </li>
+            <li>
+              <Link href="/money.html">Investment Return Calculator</Link>
+            </li>
+            <li>
+              <Link href="/mandarin/index.html">
+                Mandarin practice vocabulary from 2016
+              </Link>
+            </li>
+          </ul>
         </Project>
       </div>
     </div>

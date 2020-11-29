@@ -1,6 +1,8 @@
 import "../styles/reset.css";
 import "../styles/defaults.css";
 import "../styles/globals.scss";
+import "../styles/chat.scss";
+
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
