@@ -1,0 +1,151 @@
+/* CSS */
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@4/distr/fira_code.css);
+
+:root {
+  --dark: #1a1a1a;
+  --bright: #fafafa;
+  --light: #f2f2f2;
+  --link-color: #356aa0;
+  --link-underline: #356aa0aa;
+
+  --font-serif: "Baskerville", "Times New Roman", "Times", serif;
+  --font-sans: "Avenir", "Helvetica", "Arial", sans-serif;
+  --font-family: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+#root,
+#__next {
+  height: 100%;
+}
+
+body {
+  font: 300 1em/1.5 var(--font-family);
+  color: var(--dark);
+  background-color: var(--bright);
+}
+
+a {
+  color: var(--link-color);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--bright);
+  background: var(--link-color);
+  text-decoration: none;
+  border: none;
+}
+
+h1 {
+  font-size: 22px;
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 19px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 17px;
+}
+h6 {
+  font-size: 16px;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header,
+.main,
+.projects {
+  padding: 0 1em;
+}
+
+.header {
+  padding-top: 1em;
+  background: var(--dark);
+  color: var(--bright);
+}
+.main {
+  background: var(--dark);
+  color: var(--bright);
+  padding: 1em 0;
+  p {
+    margin-top: 0;
+  }
+}
+.projects {
+  padding: 1em 0;
+  background: var(--light);
+}
+
+.header {
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-flow: row wrap;
+
+    h1 {
+      display: inline-block;
+      margin: 0.5em 0.5em 0.5em 0;
+    }
+
+    .nav {
+      display: inline-flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      margin: 0 -0.5em;
+
+      .link a {
+        border-bottom: thin solid var(--link-underline);
+        border-bottom: thin solid #f2f2f288;
+        display: inline-block;
+        margin: 0 0.5em;
+        color: var(--bright);
+        &:hover {
+          color: var(--dark);
+          background: var(--bright);
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  .project {
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: thin solid #ddd;
+
+      h3 {
+        margin: 0.5em 0 0;
+        display: inline-block;
+      }
+      .date {
+        opacity: 0.6;
+      }
+    }
+  }
+}

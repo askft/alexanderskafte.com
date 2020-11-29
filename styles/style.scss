@@ -1,0 +1,239 @@
+
+/* Some colors from http://timtrott.co.uk/web-20-color-palette/ */
+
+/* Menu font */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic");
+
+/* Heading and text font */
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic");
+
+/* ----------------------------------------------------------------------------
+    Variables
+---------------------------------------------------------------------------- */
+
+$menu-bg:           #ffffff;
+$menu-color:        #111111;
+$menu-color-hover:  #111111;
+$desc-color:        #7a7a7f;
+
+$content-bg:        #ffffff;
+$content-color:     #36393d;
+
+$code-bg:           #f8f8f8;
+
+$text-color:        #36393d;
+$link-color:        #356aa0;
+
+$text-font:         'proxima-nova', 'PT Serif';
+$menu-font:         'proxima-nova', 'Open Sans';
+
+$logo-weight:       400;
+$desc-weigth:       300;
+$menu-weight:       300;
+$menu-weight-hover: 500;
+$main-weight:       300;
+
+$main-width:        720px;
+
+$break:             768px;
+
+
+/* ----------------------------------------------------------------------------
+    CSS
+---------------------------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: $content-bg;
+  color: $text-color;
+  font-family: $text-font, serif;
+  line-height: 140%;
+}
+
+img {
+    width: 100%;
+    margin: 2em auto;
+    display: block;
+    -webkit-box-shadow: 0px 0px 20px -5px rgba(51,51,51,1);
+       -moz-box-shadow: 0px 0px 20px -5px rgba(51,51,51,1);
+            box-shadow: 0px 0px 20px -5px rgba(51,51,51,1);
+}
+
+// Text ----------------------------------------------------------------------
+
+.bold { font-weight: 500; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  line-height: 140%;
+}
+
+h1.home { font-size: 1.7em; }
+h2 { margin-bottom: 0.5em; border-bottom: 2px solid #e8e8e8; font-weight: 400; }
+h2.home { border-bottom: none; }
+h3 { /*font-style: italic;*/ padding-bottom: 0; }
+
+ul { line-height: 160%; }
+p { /*text-indent: 1em;*/ line-height: 160%; }
+a { color: $link-color; text-decoration: none; }
+
+code, pre {
+    background: $code-bg;
+}
+pre {
+    padding: 1em;
+    border: thin solid #e8e8e8;
+}
+
+blockquote {
+    background: #fcfcfc;
+    padding: 0.5em 1em;
+    border: 1px solid #ddd;
+    border-left: 5px solid #ccc;
+}
+
+.embedded-video {
+    max-width: 420px;
+}
+
+
+// Layout --------------------------------------------------------------------
+
+#menu {
+    background: $menu-bg;
+    color: $menu-color;
+    font-family: $menu-font, sans-serif;
+    font-weight: $menu-weight;
+    text-align: center;
+
+    nav {
+        #logo {
+            font-size: 2em;
+            font-weight: $logo-weight;
+            margin: 0 auto;
+            padding: 1.5em 0 0.5em;
+
+            a {
+                color: $menu-color;
+            }
+        }
+        #desc {
+            font-weight: $desc-weigth;
+            color: $desc-color;
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                padding: 0.8em;
+
+                @media screen and (max-width: 375px) {
+                    font-size: 1em;
+                    padding: 0.5em;
+                }
+                @media screen and (max-width: 320px) {
+                    font-size: 0.8em;
+                    padding: 0.4em;
+                }
+
+                a {
+                    color: inherit;
+                    font-size: 0.9em;
+                    text-decoration: none;
+                    display: inline-block;
+                    transition: .1s all;
+                    border-bottom: 2px solid $menu-bg;
+                }
+            }
+        }
+    }
+}
+
+li.current a,
+#menu nav ul li a:hover,
+#menu nav ul li a:active {
+    color: $menu-color-hover;
+    border-bottom: 2px solid black !important;
+}
+
+li.current a {
+    font-weight: $menu-weight-hover;
+}
+
+footer { }
+
+main {
+    background: $content-bg;
+    font-weight: $main-weight;
+
+    @media screen and (max-width: $break) { }     /* Small screen */
+    @media screen and (min-width: $break + 1) { } /* Big screen */
+
+    .content {
+        padding: 1em 1.5em 1em;
+        margin: 0 auto;
+        max-width: $main-width;
+    }
+}
+
+
+//  Blog specifics -----------------------------------------------------------
+
+.tag {
+    background: #f8f8f8;
+    padding: 0 0.3em;
+    font-style: italic;
+}
+
+
+//  Album specifics ----------------------------------------------------------
+
+.album {
+    // img {
+    //     width: initial;
+    //     margin: initial;
+    //     display: initial;
+    //     -webkit-box-shadow: initial;
+    //        -moz-box-shadow: initial;
+    //             box-shadow: initial;
+    //     /* end reset */
+    // }
+}
+    
+
+
+// Other ---------------------------------------------------------------------
+
+/* https://css-tricks.com/examples/hrs/ */
+
+hr {
+  padding: 0;
+  border: none;
+  border-top: medium double #e8e8e8;
+  color: #e8e8e8;
+  text-align: center;
+}
+/*
+hr:after {
+  color: #356AA0;
+  content: "λ";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: $content-bg;
+}
+*/
