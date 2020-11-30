@@ -87,6 +87,7 @@ code {
 
 .header,
 .main,
+.image-section,
 .projects {
   padding: 0 1em;
 }
@@ -104,15 +105,18 @@ code {
 }
 
 .header {
-  padding-top: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 .main {
   padding-top: 1em;
+  padding-bottom: 1em;
   p {
     margin-top: 0;
   }
 }
-.projects {
+.image-section {
+  padding: 0 1em;
 }
 
 .header {
@@ -141,7 +145,7 @@ code {
       margin: 0 -0.5em;
 
       .link a {
-        border-bottom: thin solid var(--nav-link-underline);
+        // border-bottom: thin solid var(--nav-link-underline);
         display: inline-block;
         margin: 0 0.5em;
         padding: 0 2px;
@@ -187,7 +191,6 @@ code {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding-bottom: 1em;
 
   .image-section {
     flex: 1 0 auto;
@@ -209,10 +212,14 @@ code {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .page {
-    .image-section {
-      display: none;
-    }
+@media screen and (max-width: 480px), screen and (max-height: 600px) {
+  .page .image-section {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .nav a {
+    font-size: 0.9em;
   }
 }
