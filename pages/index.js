@@ -19,57 +19,69 @@ export default function HomePage() {
         <title>Alexander Skafte</title>
       </Head>
 
-      <div className="header">
+      <Header />
+
+      <div className="image-section">
         <div className="wrapper">
-          <div className="topbar">
-            <h1>
-              <Link href="/">
-                <a>Alexander Skafte</a>
-              </Link>
-            </h1>
-            <div className="nav">
-              <div className="link">
-                <Link href="/projects">
-                  <a>Projects</a>
-                </Link>
-              </div>
-              {links.map((link, i) => (
-                <div key={i} className="link">
-                  <MyLink href={link.url}>{link.title}</MyLink>
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="image" />
         </div>
       </div>
 
-      <div className="main">
-        <div className="wrapper">
-          <p>
-            Software engineer and a M.Sc. student at Lund University currently
-            working on a master's thesis in machine learning and natural
-            language processing.
-          </p>
-          <p>
-            Interested in systems, languages, people, decentralization,
-            nutrition, breathing, training, music, photography, traditional
-            foods, web 1.0 and some more.
-            {/* nomadic steppe cultures */}
-          </p>
-          <p>
-            Check out my <Link href="/projects">projects</Link>!
-          </p>
-          <p>
-            Wanna chat? You can contact me on{" "}
-            <span dangerouslySetInnerHTML={{ __html: email }} /> or via
-            LinkedIn.
-          </p>
-          <img className="image" src="/me.jpg" alt="Photo of me" />
-        </div>
-      </div>
+      <Main />
     </div>
   );
 }
+
+const Header = () => (
+  <div className="header">
+    <div className="wrapper">
+      <div className="topbar">
+        <h1>
+          <Link href="/">
+            <a>Alexander Skafte</a>
+          </Link>
+        </h1>
+        <div className="nav">
+          <div className="link">
+            <Link href="/projects">
+              <a>Projects</a>
+            </Link>
+          </div>
+          {links.map((link, i) => (
+            <div key={i} className="link">
+              <MyLink href={link.url}>{link.title}</MyLink>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const Main = () => (
+  <div className="main">
+    <div className="wrapper">
+      <p>
+        Software engineer and a M.Sc. student at Lund University currently
+        working on a master's thesis in machine learning and natural language
+        processing.
+      </p>
+      <p>
+        Interested in systems, languages, people, decentralization, nutrition,
+        breathing, training, music, photography, traditional foods, web 1.0 and
+        some more.
+        {/* nomadic steppe cultures */}
+      </p>
+      <p>
+        Check out my <Link href="/projects">projects</Link>!
+      </p>
+      <p>
+        Wanna chat? You can contact me on{" "}
+        <span dangerouslySetInnerHTML={{ __html: email }} /> or via LinkedIn.
+      </p>
+    </div>
+  </div>
+);
 
 const MyLink = ({ children, ...rest }) => (
   <a target="_blank" rel="noreferrer" {...rest}>
