@@ -78,7 +78,7 @@ const Projects = () => (
 
     <Project title="Master's Thesis Project in ML and NLP" date="ongoing 2020">
       <p>
-        Using <b>machine learning</b> and <b>natural language</b> processing
+        Using <b>machine learning</b> and <b>natural language processing</b>
         techniques to extract protein-protein interactions from biomedical
         research papers using named-entity recognition and relationship
         extraction. Technologies used include <b>Python</b>, <b>TensorFlow</b>{" "}
