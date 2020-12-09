@@ -68,9 +68,8 @@ const Main = () => (
       </p>
       <p>
         Interested in systems, languages, people, decentralization, nutrition,
-        breathing, training, music, photography, traditional foods, web 1.0 and
-        some more.
-        {/* nomadic steppe cultures */}
+        breathing, training, music, photography, traditional foods and some
+        more.
       </p>
       <p>
         Check out my <Link href="/projects">projects</Link>!
