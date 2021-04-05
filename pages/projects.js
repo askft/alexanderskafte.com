@@ -87,7 +87,7 @@ const Projects = () => (
       </p>
     </Project>
 
-    <Project title="Anonymous Hyper-Real-Time Chat" date="November 2020">
+    <Project title="Anonymous Ultra-Real-Time Chat" date="November 2020">
       <p>
         A chat which shows each user's message as it is being typed. It may not
         sound like a big deal but in fact it makes conversation extremely fun
@@ -100,7 +100,7 @@ const Projects = () => (
         user-supplied secret through a hash algorithm.
       </p>
       <p>
-        The advantages of an anonymous hyper-real-time chat are manifold:{" "}
+        The advantages of an anonymous ultra-real-time chat are manifold:{" "}
         <b>(I)</b> no user registration is required, so anyone can join the
         conversation instantly, <b>(II)</b> shifts the focus onto quality of
         content, naturally defeating credentialism, <b>(III)</b> conversation
