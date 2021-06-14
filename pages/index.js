@@ -67,9 +67,9 @@ const Main = () => (
         processing.
       </p>
       <p>
-        Interested in systems, languages, people, decentralization, nutrition,
-        breathing, training, music, photography, traditional foods and some
-        more.
+        Interested in decentralized systems and communication networks,
+        blockchain tech, natural languages, people, health, music, photography,
+        traditional foods and some more.
       </p>
       <p>
         Check out my <Link href="/projects">projects</Link>!

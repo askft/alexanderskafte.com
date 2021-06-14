@@ -87,12 +87,15 @@ const Projects = () => (
       </p>
     </Project>
 
-    <Project title="Anonymous Ultra-Real-Time Chat" date="November 2020">
+    <Project
+      title="Anonymous Ultra-Real-Time Chat"
+      date="November 2020 – current"
+    >
       <p>
-        A chat which shows each user's message as it is being typed. It may not
-        sound like a big deal but in fact it makes conversation extremely fun
-        and engaging. By design this kind of chat encourages a synchronous type
-        of conversation, much like that which we engage in offline.
+        A chat which shows each user's message as it is being typed. By design
+        this kind of chat encourages a synchronous type of conversation, much
+        like that which we engage in offline, and makes conversation extremely
+        fun and engaging.
       </p>
       <p>
         Additionally the chat allows for anonymity but with the option to
@@ -108,14 +111,15 @@ const Projects = () => (
         <b>(IV)</b> since you see what people type in real time, "talking past
         each other" becomes less of an issue.
       </p>
-      <p>
+      <p>Contact me if you're curious to learn more.</p>
+      {/* <p>
         <b>
           <MyLink href="/chat">A demo is available here!</MyLink>
         </b>{" "}
         Messages are removed after 12 hours. I'm <code>5VkEelUtSM</code>.
-      </p>
+      </p> */}
       <p>
-        Built with <b>Socket.IO</b>, <b>React</b>, <b>Node</b>, <b>SQLite3</b>{" "}
+        Built with <b>WebSocket</b>, <b>React</b>, <b>Golang</b>, <b>SQLite3</b>{" "}
         and <b>NGINX</b>.
       </p>
     </Project>
