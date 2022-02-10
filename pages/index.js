@@ -42,11 +42,11 @@ const Header = () => (
           </Link>
         </h1>
         <div className="nav">
-          <div className="link">
+          {/* <div className="link">
             <Link href="/projects">
               <a>Projects</a>
             </Link>
-          </div>
+          </div> */}
           {links.map((link, i) => (
             <div key={i} className="link">
               <MyLink href={link.url}>{link.title}</MyLink>
@@ -61,19 +61,15 @@ const Header = () => (
 const Main = () => (
   <div className="main">
     <div className="wrapper">
+      <p>Hello!</p>
       <p>
-        Software engineer and a M.Sc. student at Lund University currently
-        working on a master's thesis in machine learning and natural language
-        processing.
+        I'm a full-stack software engineer interested in decentralized systems,
+        communication networks, blockchain technology, natural languages,
+        health, music and photography.
       </p>
-      <p>
-        Interested in decentralized systems and communication networks,
-        blockchain tech, natural languages, people, health, music, photography,
-        traditional foods and some more.
-      </p>
-      <p>
+      {/* <p>
         Check out my <Link href="/projects">projects</Link>!
-      </p>
+      </p> */}
       <p>
         Wanna chat? You can contact me on{" "}
         <span dangerouslySetInnerHTML={{ __html: email }} /> or via LinkedIn.

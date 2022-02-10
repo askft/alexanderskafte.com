@@ -10,7 +10,7 @@ const newMessageSound = new Howl({
   volume: 0.5,
 });
 
-import { isEmpty, onSecretChange } from "../util/util.js";
+import { isEmpty, onSecretChange } from "./util/util.js";
 
 const iconDefault = "/favicon.ico";
 const iconNotif = "/favicon-notif.ico";
