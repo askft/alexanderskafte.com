@@ -63,9 +63,8 @@ const Main = () => (
     <div className="wrapper">
       <p>Hello!</p>
       <p>
-        I'm a full-stack software engineer interested in decentralized systems,
-        communication networks, blockchain technology, natural languages,
-        health, music and photography.
+        I'm a full-stack software engineer interested in communication networks,
+        decentralized systems, health, music and photography.
       </p>
       {/* <p>
         Check out my <Link href="/projects">projects</Link>!
